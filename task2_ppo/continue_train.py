@@ -103,6 +103,8 @@ def run_ppo(config_path: str, output: str | None = None, updates: int | None = N
         critic.eval()
         with torch.no_grad():
             old_values = token_values(critic, seq, attn)[:, width - 1:-1].float()
+            if not torch.isfinite(old_values).all():
+                raise FloatingPointError(f"Non-finite critic values before PPO update {update + 1}")
             rewards = shaped_rewards(
                 batch["reward"], batch["old_logp"], batch["ref_logp"],
                 rmask, cfg["kl_beta"],
@@ -111,6 +113,8 @@ def run_ppo(config_path: str, output: str | None = None, updates: int | None = N
                 rewards, old_values, rmask,
                 gamma=float(cfg["gamma"]), lam=float(cfg["gae_lambda"]),
             )
+            if not torch.isfinite(rewards).all() or not torch.isfinite(advantages).all() or not torch.isfinite(returns).all():
+                raise FloatingPointError(f"Non-finite PPO targets before update {update + 1}")
             advantages = normalize_advantages(advantages, rmask)
         policy.train()
         critic.train()
@@ -124,17 +128,21 @@ def run_ppo(config_path: str, output: str | None = None, updates: int | None = N
                 new_logp, batch["old_logp"], advantages, rmask,
                 eps=float(cfg["clip_epsilon"]),
             )
+            if not torch.isfinite(policy_loss):
+                raise FloatingPointError(f"Non-finite PPO policy loss at update {update + 1}")
             policy_loss.backward()
             policy_grad = torch.nn.utils.clip_grad_norm_(
-                trainable_parameters(policy), float(cfg["max_grad_norm"])
+                trainable_parameters(policy), float(cfg["max_grad_norm"]), error_if_nonfinite=True
             )
             p_opt.step()
             v_opt.zero_grad(set_to_none=True)
             predicted = token_values(critic, seq, attn)[:, width - 1:-1].float()
             value_loss = value_mse_loss(predicted, returns, rmask) * float(cfg["value_coef"])
+            if not torch.isfinite(value_loss):
+                raise FloatingPointError(f"Non-finite PPO value loss at update {update + 1}")
             value_loss.backward()
             value_grad = torch.nn.utils.clip_grad_norm_(
-                trainable_parameters(critic), float(cfg["max_grad_norm"])
+                trainable_parameters(critic), float(cfg["max_grad_norm"]), error_if_nonfinite=True
             )
             v_opt.step()
             epoch_logs.append((float(policy_loss.item()), float(value_loss.item()),

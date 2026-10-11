@@ -10,6 +10,9 @@ policy_learning_rate: 3.0e-6
 value_lora_learning_rate: 1.0e-4
 value_head_learning_rate: 3.0e-4
 value_train_mode: lora_head
+# The released critic checkpoint is bfloat16. Keep its wide numeric range on T4 GPUs,
+# which do not have native bfloat16 support, by loading the critic in float32.
+value_dtype: float32
 
 clip_epsilon: 0.20
 clip_values: [0.05, 0.20, 0.50]
