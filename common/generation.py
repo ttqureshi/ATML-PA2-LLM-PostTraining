@@ -105,12 +105,22 @@ def response_sequence_logprobs(model, batch: dict):
         use_cache=False,
         return_dict=True,
     )
+    # DPO only uses response-token log-probabilities. Convert and normalize
+    # those vocabulary rows only; materializing float32 log-probabilities for
+    # every prompt position can exceed GPU memory on long fixed prompts.
     logits = outputs.logits[:, :-1, :]
     labels = batch["input_ids"][:, 1:]
     mask = batch["response_mask"][:, 1:]
-    logp = F.log_softmax(logits.float(), dim=-1)
-    tok = torch.gather(logp, -1, labels.unsqueeze(-1)).squeeze(-1)
-    return (tok * mask).sum(-1), tok, mask
+    token_logps = torch.zeros_like(mask, dtype=torch.float32)
+    for row in range(logits.shape[0]):
+        positions = torch.nonzero(mask[row] > 0, as_tuple=False).flatten()
+        response_logits = logits[row].index_select(0, positions).float()
+        response_labels = labels[row].index_select(0, positions)
+        response_logps = F.log_softmax(response_logits, dim=-1).gather(
+            -1, response_labels.unsqueeze(-1)
+        ).squeeze(-1)
+        token_logps[row].index_copy_(0, positions, response_logps)
+    return token_logps.sum(-1), token_logps, mask
 
 
 @torch.no_grad()
