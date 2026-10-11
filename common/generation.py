@@ -54,6 +54,9 @@ def batch_generate(
 
     with torch.inference_mode():
         seq = model.generate(**enc, **kwargs)
+    # PPO uses generated tokens in gradient-tracked policy updates. Cloning
+    # outside inference_mode makes a regular tensor that autograd can save.
+    seq = seq.clone()
     if was_training:
         model.train()
 
