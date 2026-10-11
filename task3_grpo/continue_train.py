@@ -7,6 +7,7 @@ from torch.optim import AdamW
 from common.data import load_yaml, read_jsonl, repo_path
 from common.logging_utils import set_seed
 from common.models import load_policy, load_reward_model, load_tokenizer, trainable_parameters
+from task3_grpo.engine import run
 
 
 def prepare_grpo_continuation(config_path: str):
@@ -37,15 +38,7 @@ def run_grpo(config_path: str, output: str | None = None, updates: int | None = 
     cfg = bundle["cfg"]
     if updates is not None:
         cfg["updates"] = int(updates)
-    out = repo_path(output or cfg["output"])
-    out.parent.mkdir(parents=True, exist_ok=True)
-
-    raise NotImplementedError(
-        "TODO(student): implement the GRPO rollout/update loop from the supplied midpoint. Generate K completions per prompt, "
-        "mask max-length completions when configured, compute within-prompt relative advantages, apply the clipped objective, "
-        "log reward/KL/group reward std/uninformative-group fraction/entropy/length/gradient norm, and save the adapter. "
-        "Validate task3_grpo.grpo before running experiments."
-    )
+    return run(bundle, output or cfg["output"], int(cfg["updates"]), loss_type, run_name)
 
 
 def main():

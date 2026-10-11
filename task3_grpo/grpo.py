@@ -11,10 +11,16 @@ def group_relative_advantages(rewards: torch.Tensor, group_ids: torch.Tensor, ep
     `group_ids[i]` identifies which prompt produced reward `rewards[i]`.
     Validate this implementation against the group-relative definition in the assignment manual.
     """
-    # Starter implementation: students must validate the grouping logic carefully.
-    mean = rewards.mean()
-    std = rewards.std(unbiased=False).clamp_min(eps)
-    return (rewards - mean) / std
+    if rewards.ndim != 1 or group_ids.shape != rewards.shape:
+        raise ValueError("rewards and group_ids must be matching one-dimensional tensors")
+    out = torch.zeros_like(rewards)
+    for gid in torch.unique(group_ids):
+        member = group_ids == gid
+        group = rewards[member]
+        mean = group.mean()
+        std = group.std(unbiased=False)
+        out[member] = (group - mean) / (std + eps)
+    return out
 
 
 def grpo_policy_loss(
@@ -60,10 +66,11 @@ def grpo_policy_loss(
     affected = ((ratio < (1.0 - eps)) | (ratio > (1.0 + eps))).float()
     return loss, {
         "policy_term": policy_term.detach(),
-        "sampled_kl": kl.detach(),
+        "sampled_kl": sampled_kl(new_logp.detach(), ref_logp.detach(), token_mask).detach(),
+        "kl_penalty": kl.detach(),
         "clip_fraction": masked_mean(affected, token_mask).detach(),
         "ratio_mean": masked_mean(ratio.detach(), token_mask),
-        "sample_entropy": sample_entropy(new_logp.detach(), token_mask),
+        "sampled_token_surprisal": sample_entropy(new_logp.detach(), token_mask),
     }
 
 

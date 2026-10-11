@@ -71,4 +71,27 @@ if "ref_logprobs" not in row and "reference_logprobs" not in row:
 if not {"source_index", "response"}.issubset(row):
     raise SystemExit("PPO cache missing source_index/response")
 
-print("All required course assets are present and release schemas are valid.")
+# Validate every pinned release file, including large weights that directory-only
+# checks above would otherwise miss during a partial download.
+import hashlib
+import json
+
+manifest_path = repo_path("manifests/sha256.json")
+if not manifest_path.is_file():
+    raise SystemExit(f"Missing pinned release manifest: {manifest_path}")
+hashes = json.loads(manifest_path.read_text(encoding="utf-8"))
+for relative_path, expected in hashes.items():
+    # A manifest cannot contain its own SHA-256 digest; verify every other file.
+    if relative_path == "manifests/sha256.json":
+        continue
+    asset = repo_path(relative_path)
+    if not asset.is_file():
+        raise SystemExit(f"Missing pinned release file: {asset}")
+    digest = hashlib.sha256()
+    with asset.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(8 * 1024 * 1024), b""):
+            digest.update(chunk)
+    if digest.hexdigest() != expected:
+        raise SystemExit(f"SHA-256 mismatch for pinned release file: {asset}")
+
+print(f"All {len(hashes) - 1} pinned release assets match their SHA-256 checksums; schemas are valid.")
