@@ -15,6 +15,8 @@ python -m scripts.validate_assets
 
 The downloader pins the course asset revision `0b350481fb03f5525a35bcdec4131bd4fe487f98` from [the course Hugging Face dataset](https://huggingface.co/datasets/AbDu11aHHH/ATML-PA2-assets). Do not edit files under `data/`, `cached/`, or `checkpoints/`. Public Hugging Face models load on demand. The released configuration files fix seed, prompt indices, model IDs, LoRA settings, budgets, and decoding.
 
+For a hosted GPU workflow, open the [Colab GPU runner](https://colab.research.google.com/github/ttqureshi/ATML-PA2-LLM-PostTraining/blob/main/notebooks/colab_gpu_runner.ipynb), select a GPU runtime, and run its cells in order. It persists adapters and result files to Google Drive. A long run may need multiple Colab sessions.
+
 ## Reproduce the experiments
 
 Run the command blocks in order. Each module is a fresh process and saves its own JSON/JSONL results under `results/`. Task 4 depends on the **standard** adapters from Tasks 1–3. Task 5 uses supplied frozen adapters and can run independently after setup.
