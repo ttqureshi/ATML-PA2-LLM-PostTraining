@@ -1,0 +1,106 @@
+{
+  "results/task5_feedback/comparison.json": {
+    "bytes": 6633,
+    "sha256": "d93d1c4a6288fc7fa5031c01300f833ca104a850fb85135dd370567746513ff0"
+  },
+  "results/task5_feedback/diagnostics/controlled_pairs.jsonl": {
+    "bytes": 95220,
+    "sha256": "83c761702fb1b4492e357dc428d42f65ea97aefa8c3f73e368b38fc6f1147ecd"
+  },
+  "results/task5_feedback/diagnostics/judge_cache.json": {
+    "bytes": 6140,
+    "sha256": "c3d83265582d6b473192ffd857f052702a2dd5fc380def6661ea695d9e73eff8"
+  },
+  "results/task5_feedback/diagnostics/summary.json": {
+    "bytes": 2008,
+    "sha256": "f0b9c01549dd00bb368a3764f862875b25699852f6b19853a06bfe31c55269d2"
+  },
+  "results/task5_feedback/feedback_diagnostics.csv": {
+    "bytes": 475,
+    "sha256": "e8c81a8853cf909786f33df3ae7cb6e748d370bd602dc3fbc81c4cd793b68677"
+  },
+  "results/task5_feedback/feedback_metrics.csv": {
+    "bytes": 624,
+    "sha256": "b1a77973432348eef593305f0eff3383f8c889f63150679c0d16b1bdc13da5eb"
+  },
+  "results/task5_feedback/feedback_pairwise.csv": {
+    "bytes": 414,
+    "sha256": "52b16e2fbb9e7515127b666b2577c8990c13578f505788e2dca72ab5afa17442"
+  },
+  "results/task5_feedback/figures/task5_accuracy.png": {
+    "bytes": 27102,
+    "sha256": "56a8041c8ef9fedf08b89c2dc74e1d5ccbf63e67a1b1c7fb56921e14b47d6b0e"
+  },
+  "results/task5_feedback/figures/task5_diagnostic_preferences.png": {
+    "bytes": 40760,
+    "sha256": "7232ccab813130740e779f212a838463cb61bda363d8e4012cf2f64f8dd09d7a"
+  },
+  "results/task5_feedback/figures/task5_pairwise_win_rates.png": {
+    "bytes": 32620,
+    "sha256": "3bc7ec952df66d3ce3b2516bbf867d53055f8e1341a976111263ab67746eea11"
+  },
+  "results/task5_feedback/gsm/judge_cache.json": {
+    "bytes": 45033,
+    "sha256": "ffe50fc8841524faed087e328ff3de3d0b64f77b376b54abbc3dd32fd0c6fcc7"
+  },
+  "results/task5_feedback/gsm/rlaif_responses.jsonl": {
+    "bytes": 434274,
+    "sha256": "b29feb58def5695b09a8ef7e20ecb165f35c8057dbff7df976a618c3b95d3e1a"
+  },
+  "results/task5_feedback/gsm/rlaif_vs_sft_pairs.jsonl": {
+    "bytes": 729063,
+    "sha256": "37090ab70f61cff5132214843d7617202aeaf0f00b3bb298aed4b3552b0ad57f"
+  },
+  "results/task5_feedback/gsm/rlvr_responses.jsonl": {
+    "bytes": 436613,
+    "sha256": "9b55f869abef838ad13e8098fbb7440d5baec2d3c5d6ad5eac047504dbc54109"
+  },
+  "results/task5_feedback/gsm/rlvr_vs_sft_pairs.jsonl": {
+    "bytes": 731397,
+    "sha256": "11b780068179e8f6dac76b9a30bcad42270b603e407ae1be23d5030b14348c47"
+  },
+  "results/task5_feedback/gsm/sft_responses.jsonl": {
+    "bytes": 434242,
+    "sha256": "2da2a57980304e2539e37e3f359da93c23bbc6ee01e1cc2742431af8dd565620"
+  },
+  "results/task5_feedback/gsm/summary.json": {
+    "bytes": 5139,
+    "sha256": "9204b5512af2c20adce5fe3639123b837572138cd9743dcfa12b0d043024af30"
+  },
+  "results/task5_feedback/kaggle_output_archive.zip": {
+    "bytes": 838381,
+    "sha256": "b61912c2173af39fb2f9b6bab8b7da59bfc808678c9e0e1807ce3acd61bb9357"
+  },
+  "results/task5_feedback/kaggle_run_commit.txt": {
+    "bytes": 41,
+    "sha256": "03e9b2e85cbde540d331b38d55061bc216836e99dfe79f229ca1b3549f5e0d86"
+  },
+  "results/task5_feedback/transfer/judge_cache.json": {
+    "bytes": 14893,
+    "sha256": "4e0213bf345ded79c1c95dd5b6cc487e4409eb68d6acd5a432c2813b41ead51c"
+  },
+  "results/task5_feedback/transfer/rlaif_responses.jsonl": {
+    "bytes": 102413,
+    "sha256": "13df4766260dba456ecfbde95ddc086b47381667287a10386cf51d65fc932198"
+  },
+  "results/task5_feedback/transfer/rlaif_vs_sft_pairs.jsonl": {
+    "bytes": 166812,
+    "sha256": "976ed24954b7f5a92de247205df8d3b01c981d43882a8373033fcdd1a427d325"
+  },
+  "results/task5_feedback/transfer/rlvr_responses.jsonl": {
+    "bytes": 101815,
+    "sha256": "c784e84d5756111ffaddbdc19545c1c39542ab39c46dd1d45c87f698d01432a0"
+  },
+  "results/task5_feedback/transfer/rlvr_vs_sft_pairs.jsonl": {
+    "bytes": 166220,
+    "sha256": "352448190653f581748244aa70b79b53a1d0f5d6f3e252aea74a78e1cf60b0cf"
+  },
+  "results/task5_feedback/transfer/sft_responses.jsonl": {
+    "bytes": 104813,
+    "sha256": "5fc7cbae75d6e043d7af29bf124cc67d9c05331242030922ef081bcae239f62a"
+  },
+  "results/task5_feedback/transfer/summary.json": {
+    "bytes": 3992,
+    "sha256": "31d6ff7f2fa868475758f8d2d0a2d988b06852b4053d42a54433f845497d9cf9"
+  }
+}

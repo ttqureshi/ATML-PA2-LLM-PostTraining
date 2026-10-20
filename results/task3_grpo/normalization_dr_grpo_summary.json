@@ -1,0 +1,17 @@
+{
+  "run_name": "normalization_dr_grpo",
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_dr_grpo",
+  "source_midpoint": "checkpoints/grpo_midpoint_policy",
+  "loss_type": "dr_grpo",
+  "updates": 8,
+  "group_size": 4,
+  "prompts_per_update": 1,
+  "policy_epochs": 1,
+  "max_completion_length": 512,
+  "seed": 6304,
+  "generated_tokens": 8171,
+  "maximum_generated_token_budget": 16384,
+  "wall_clock_seconds": 178.97030227199957,
+  "peak_vram_bytes": 7609311232,
+  "trajectory": "/kaggle/working/ATML-PA2-LLM-PostTraining/results/task3_grpo/normalization_dr_grpo_trajectory.jsonl"
+}

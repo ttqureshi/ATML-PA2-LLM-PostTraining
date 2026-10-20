@@ -1,0 +1,13 @@
+{
+  "name": "normalization_dr_grpo",
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_dr_grpo",
+  "examples": 200,
+  "mean_reward": 1.141394805908203,
+  "mean_sampled_kl": -1.8764622348044212e-05,
+  "mean_response_length": 252.065,
+  "truncated_fraction": 0.245,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 512
+  }
+}

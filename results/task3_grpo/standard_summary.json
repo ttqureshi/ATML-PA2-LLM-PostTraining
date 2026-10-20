@@ -1,0 +1,17 @@
+{
+  "run_name": "standard",
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/standard",
+  "source_midpoint": "checkpoints/grpo_midpoint_policy",
+  "loss_type": "grpo",
+  "updates": 20,
+  "group_size": 4,
+  "prompts_per_update": 1,
+  "policy_epochs": 1,
+  "max_completion_length": 512,
+  "seed": 6304,
+  "generated_tokens": 22120,
+  "maximum_generated_token_budget": 40960,
+  "wall_clock_seconds": 397.666351751,
+  "peak_vram_bytes": 5824570368,
+  "trajectory": "/kaggle/working/ATML-PA2-LLM-PostTraining/results/task3_grpo/standard_trajectory.jsonl"
+}

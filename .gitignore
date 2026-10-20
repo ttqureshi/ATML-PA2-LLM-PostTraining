@@ -7,6 +7,7 @@ venv/
 
 # Caches
 .cache/
+.kaggle_task*/
 hf_cache/
 .huggingface/
 wandb/
@@ -28,3 +29,8 @@ data/*
 # Misc
 *.zip
 .DS_Store
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out

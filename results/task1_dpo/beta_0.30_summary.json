@@ -1,0 +1,22 @@
+{
+  "name": "beta_0.30",
+  "adapter": "outputs/task1_dpo/beta_0.30",
+  "dataset": "data/dpo_standard_eval.jsonl",
+  "pair_count": 300,
+  "heldout_dpo_loss": 0.6780009493231773,
+  "heldout_preference_accuracy": 0.6366666666666667,
+  "beta_for_loss": 0.3,
+  "sampled_kl_per_response_token": -8.837355701862722e-05,
+  "response_length_tokens": {
+    "mean": 156.32333333333332,
+    "std": 105.79098318014736,
+    "count": 300
+  },
+  "reference_response_length_tokens": {
+    "mean": 156.74333333333334,
+    "std": 105.05295865525265,
+    "count": 300
+  },
+  "mean_reward_score": 1.1746776835123698,
+  "mean_reference_reward_score": 1.1733838399251302
+}

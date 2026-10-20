@@ -1,0 +1,11 @@
+{
+  "run_name": "kl_0.10",
+  "updates": 8,
+  "seed": 6304,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.1,
+  "total_generated_tokens": 2112,
+  "wall_clock_seconds": 115.92177161099971,
+  "peak_vram_bytes": 8881829888,
+  "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0.10"
+}

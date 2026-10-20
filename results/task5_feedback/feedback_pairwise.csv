@@ -1,0 +1,5 @@
+policy,dataset,n,ai_pairwise_win_rate_vs_sft,judge_ties,verifier_ties,verifier_judge_agreement_all,verifier_judge_agreement_strict,n_strict_verifier_pairs
+rlvr,gsm,300,0.49166666666666664,257,207,0.66,0.13978494623655913,93
+rlvr,transfer,100,0.495,71,62,0.59,0.2631578947368421,38
+rlaif,gsm,300,0.485,259,209,0.6966666666666667,0.16483516483516483,91
+rlaif,transfer,100,0.535,65,65,0.55,0.2857142857142857,35

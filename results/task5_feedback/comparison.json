@@ -1,0 +1,220 @@
+{
+  "policies": {
+    "sft": {
+      "gsm": {
+        "n": 300,
+        "exact_accuracy": 0.29333333333333333,
+        "format_compliance": 0.43,
+        "response_length_mean": 282.85333333333335,
+        "response_length_std": 98.45319609957933
+      },
+      "transfer": {
+        "n": 100,
+        "exact_accuracy": 0.46,
+        "format_compliance": 0.53,
+        "response_length_mean": 169.75,
+        "response_length_std": 91.68155485156215
+      },
+      "accuracy_drop_gsm_minus_transfer": -0.16666666666666669,
+      "format_compliance_drop_gsm_minus_transfer": -0.10000000000000003,
+      "response_length_change_transfer_minus_gsm": -113.10333333333335,
+      "gsm_failure_types": {
+        "correct": 88,
+        "wrong_designated_final": 41,
+        "missing_designated_final": 171,
+        "n": 300
+      },
+      "transfer_failure_types": {
+        "correct": 46,
+        "wrong_designated_final": 7,
+        "missing_designated_final": 47,
+        "n": 100
+      }
+    },
+    "rlvr": {
+      "gsm": {
+        "n": 300,
+        "exact_accuracy": 0.2833333333333333,
+        "format_compliance": 0.42,
+        "response_length_mean": 286.08,
+        "response_length_std": 97.6190568826941
+      },
+      "transfer": {
+        "n": 100,
+        "exact_accuracy": 0.5,
+        "format_compliance": 0.6,
+        "response_length_mean": 163.61,
+        "response_length_std": 77.30871813708981
+      },
+      "accuracy_drop_gsm_minus_transfer": -0.21666666666666667,
+      "format_compliance_drop_gsm_minus_transfer": -0.18,
+      "response_length_change_transfer_minus_gsm": -122.46999999999997,
+      "gsm_failure_types": {
+        "correct": 85,
+        "wrong_designated_final": 41,
+        "missing_designated_final": 174,
+        "n": 300
+      },
+      "transfer_failure_types": {
+        "correct": 50,
+        "wrong_designated_final": 10,
+        "missing_designated_final": 40,
+        "n": 100
+      }
+    },
+    "rlaif": {
+      "gsm": {
+        "n": 300,
+        "exact_accuracy": 0.29,
+        "format_compliance": 0.43333333333333335,
+        "response_length_mean": 282.5133333333333,
+        "response_length_std": 92.63697869761417
+      },
+      "transfer": {
+        "n": 100,
+        "exact_accuracy": 0.55,
+        "format_compliance": 0.64,
+        "response_length_mean": 161.91,
+        "response_length_std": 73.81383271447162
+      },
+      "accuracy_drop_gsm_minus_transfer": -0.26000000000000006,
+      "format_compliance_drop_gsm_minus_transfer": -0.20666666666666667,
+      "response_length_change_transfer_minus_gsm": -120.60333333333332,
+      "gsm_failure_types": {
+        "correct": 87,
+        "wrong_designated_final": 43,
+        "missing_designated_final": 170,
+        "n": 300
+      },
+      "transfer_failure_types": {
+        "correct": 55,
+        "wrong_designated_final": 9,
+        "missing_designated_final": 36,
+        "n": 100
+      }
+    }
+  },
+  "pairwise_vs_sft": {
+    "rlvr": {
+      "gsm": {
+        "n": 300,
+        "ai_pairwise_win_rate_vs_sft": 0.49166666666666664,
+        "judge_ties": 257,
+        "verifier_ties": 207,
+        "verifier_judge_agreement_all": 0.66,
+        "verifier_judge_agreement_strict": 0.13978494623655913,
+        "n_strict_verifier_pairs": 93
+      },
+      "transfer": {
+        "n": 100,
+        "ai_pairwise_win_rate_vs_sft": 0.495,
+        "judge_ties": 71,
+        "verifier_ties": 62,
+        "verifier_judge_agreement_all": 0.59,
+        "verifier_judge_agreement_strict": 0.2631578947368421,
+        "n_strict_verifier_pairs": 38
+      },
+      "ai_win_rate_drop_gsm_minus_transfer": -0.003333333333333355,
+      "agreement_change_transfer_minus_gsm": -0.07000000000000006
+    },
+    "rlaif": {
+      "gsm": {
+        "n": 300,
+        "ai_pairwise_win_rate_vs_sft": 0.485,
+        "judge_ties": 259,
+        "verifier_ties": 209,
+        "verifier_judge_agreement_all": 0.6966666666666667,
+        "verifier_judge_agreement_strict": 0.16483516483516483,
+        "n_strict_verifier_pairs": 91
+      },
+      "transfer": {
+        "n": 100,
+        "ai_pairwise_win_rate_vs_sft": 0.535,
+        "judge_ties": 65,
+        "verifier_ties": 65,
+        "verifier_judge_agreement_all": 0.55,
+        "verifier_judge_agreement_strict": 0.2857142857142857,
+        "n_strict_verifier_pairs": 35
+      },
+      "ai_win_rate_drop_gsm_minus_transfer": -0.050000000000000044,
+      "agreement_change_transfer_minus_gsm": -0.1466666666666666
+    }
+  },
+  "diagnostics": {
+    "rlvr": {
+      "corrupt_reasoning_correct_final": {
+        "n": 20,
+        "better_response_rate": 0.0,
+        "tie_rate": 1.0,
+        "wrong_preference_rate": 0.0
+      },
+      "gold_distractor_wrong_final": {
+        "n": 20,
+        "better_response_rate": 1.0,
+        "tie_rate": 0.0,
+        "wrong_preference_rate": 0.0
+      },
+      "good_reasoning_wrong_final": {
+        "n": 20,
+        "better_response_rate": 1.0,
+        "tie_rate": 0.0,
+        "wrong_preference_rate": 0.0
+      },
+      "persuasive_filler_correct": {
+        "n": 20,
+        "better_response_rate": 0.0,
+        "tie_rate": 1.0,
+        "wrong_preference_rate": 0.0
+      },
+      "clean_correct": {
+        "n": 80,
+        "better_response_rate": 0.5,
+        "tie_rate": 0.5,
+        "wrong_preference_rate": 0.0
+      },
+      "Sreason": 0.0,
+      "Soutcome": 1.0,
+      "filler_susceptibility": 0.0,
+      "distractor_robustness": 1.0
+    },
+    "rlaif": {
+      "corrupt_reasoning_correct_final": {
+        "n": 20,
+        "better_response_rate": 0.0,
+        "tie_rate": 1.0,
+        "wrong_preference_rate": 0.0
+      },
+      "gold_distractor_wrong_final": {
+        "n": 20,
+        "better_response_rate": 0.25,
+        "tie_rate": 0.7,
+        "wrong_preference_rate": 0.05
+      },
+      "good_reasoning_wrong_final": {
+        "n": 20,
+        "better_response_rate": 0.0,
+        "tie_rate": 1.0,
+        "wrong_preference_rate": 0.0
+      },
+      "persuasive_filler_correct": {
+        "n": 20,
+        "better_response_rate": 0.0,
+        "tie_rate": 0.75,
+        "wrong_preference_rate": 0.25
+      },
+      "clean_correct": {
+        "n": 80,
+        "better_response_rate": 0.0625,
+        "tie_rate": 0.8625,
+        "wrong_preference_rate": 0.075
+      },
+      "Sreason": 0.0,
+      "Soutcome": 0.0,
+      "filler_susceptibility": 0.25,
+      "distractor_robustness": 0.25
+    },
+    "n_problems": 20,
+    "n_controlled_pairs": 80,
+    "clean_correct_anchor_interpretation": "The clean_correct row pools its four comparisons per problem against the four perturbation variants; it is not a separate fifth controlled-pair condition."
+  }
+}

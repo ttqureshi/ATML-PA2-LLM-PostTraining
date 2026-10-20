@@ -1,0 +1,23 @@
+[
+  {
+    "epsilon": 0.05,
+    "clipped_surrogate": -0.011394871922477401,
+    "clip_fraction": 0.15429997655100458,
+    "affected_token_fraction": 0.0761288860787424,
+    "valid_tokens": 8814
+  },
+  {
+    "epsilon": 0.2,
+    "clipped_surrogate": -0.007905382124547762,
+    "clip_fraction": 0.04129793475973115,
+    "affected_token_fraction": 0.019741320593837527,
+    "valid_tokens": 8814
+  },
+  {
+    "epsilon": 0.5,
+    "clipped_surrogate": -0.005374317919226401,
+    "clip_fraction": 0.021102790743795577,
+    "affected_token_fraction": 0.010097572123934034,
+    "valid_tokens": 8814
+  }
+]

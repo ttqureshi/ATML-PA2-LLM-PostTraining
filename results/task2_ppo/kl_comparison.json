@@ -1,0 +1,485 @@
+[
+  {
+    "beta_kl": 0.0,
+    "training": {
+      "run_name": "kl_0.00",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.2,
+      "kl_beta": 0.0,
+      "total_generated_tokens": 2295,
+      "wall_clock_seconds": 118.079312803,
+      "peak_vram_bytes": 8274687488,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0.00"
+    },
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.4641651916503906,
+      "kl_per_token_mean": 9.196084937457271e-06,
+      "entropy_mean": 1.0197924171388149,
+      "response_length_mean": 307.985,
+      "response_length_std": 253.8698185586463,
+      "eos_rate": 0.9
+    },
+    "trajectory": [
+      {
+        "update": 1,
+        "prompt_indices": [
+          66
+        ],
+        "generated_tokens": 512,
+        "reward": -0.4794921875,
+        "kl_per_token": -1.8100879970006645e-05,
+        "policy_loss": -0.00025192834436893463,
+        "value_loss": 2.096656918525696,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.22271396964788437,
+        "value_gradient_norm": 52.014225006103516,
+        "entropy": 1.2638373374938965,
+        "response_length": 512.0,
+        "elapsed_seconds": 25.872535581000193
+      },
+      {
+        "update": 2,
+        "prompt_indices": [
+          211
+        ],
+        "generated_tokens": 397,
+        "reward": 2.80078125,
+        "kl_per_token": -0.0003880963195115328,
+        "policy_loss": -9.558303281664848e-05,
+        "value_loss": 2.4287123680114746,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.28067341446876526,
+        "value_gradient_norm": 60.78786277770996,
+        "entropy": 1.161730408668518,
+        "response_length": 397.0,
+        "elapsed_seconds": 45.78671531799955
+      },
+      {
+        "update": 3,
+        "prompt_indices": [
+          223
+        ],
+        "generated_tokens": 213,
+        "reward": 1.978515625,
+        "kl_per_token": 0.00024370226310566068,
+        "policy_loss": 8.486358274240047e-05,
+        "value_loss": 1.6070649027824402,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.35363462567329407,
+        "value_gradient_norm": 53.74844169616699,
+        "entropy": 1.3758820295333862,
+        "response_length": 213.0,
+        "elapsed_seconds": 56.556554176000645
+      },
+      {
+        "update": 4,
+        "prompt_indices": [
+          141
+        ],
+        "generated_tokens": 83,
+        "reward": 2.0546875,
+        "kl_per_token": 0.0008730044355615973,
+        "policy_loss": 0.00047031513531692326,
+        "value_loss": 4.1559683084487915,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.4357229471206665,
+        "value_gradient_norm": 295.02687072753906,
+        "entropy": 0.9315683841705322,
+        "response_length": 83.0,
+        "elapsed_seconds": 61.3549049989997
+      },
+      {
+        "update": 5,
+        "prompt_indices": [
+          762
+        ],
+        "generated_tokens": 512,
+        "reward": 1.931640625,
+        "kl_per_token": -4.094262112630531e-05,
+        "policy_loss": -8.594244718551636e-05,
+        "value_loss": 2.9867565631866455,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.15707805007696152,
+        "value_gradient_norm": 70.5175666809082,
+        "entropy": 0.5485564470291138,
+        "response_length": 512.0,
+        "elapsed_seconds": 86.72729971599983
+      },
+      {
+        "update": 6,
+        "prompt_indices": [
+          934
+        ],
+        "generated_tokens": 51,
+        "reward": 0.1810302734375,
+        "kl_per_token": 0.00034007499925792217,
+        "policy_loss": 0.00043524480588530423,
+        "value_loss": 3.277240514755249,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.7200486361980438,
+        "value_gradient_norm": 126.60669326782227,
+        "entropy": 1.0197572708129883,
+        "response_length": 51.0,
+        "elapsed_seconds": 90.46499711900105
+      },
+      {
+        "update": 7,
+        "prompt_indices": [
+          470
+        ],
+        "generated_tokens": 512,
+        "reward": 0.4736328125,
+        "kl_per_token": -7.171856123022735e-05,
+        "policy_loss": -7.369974628090858e-05,
+        "value_loss": 2.1924935579299927,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.2185293808579445,
+        "value_gradient_norm": 60.49942207336426,
+        "entropy": 1.4175784587860107,
+        "response_length": 512.0,
+        "elapsed_seconds": 116.07129931700001
+      },
+      {
+        "update": 8,
+        "prompt_indices": [
+          1160
+        ],
+        "generated_tokens": 15,
+        "reward": 1.7314453125,
+        "kl_per_token": -0.0007429561810567975,
+        "policy_loss": 0.0007422188937198371,
+        "value_loss": 3.5777124166488647,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 1.1667743921279907,
+        "value_gradient_norm": 235.84664916992188,
+        "entropy": 0.2879653871059418,
+        "response_length": 15.0,
+        "elapsed_seconds": 117.89423388199975
+      }
+    ]
+  },
+  {
+    "beta_kl": 0.1,
+    "training": {
+      "run_name": "kl_0.10",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.2,
+      "kl_beta": 0.1,
+      "total_generated_tokens": 2112,
+      "wall_clock_seconds": 115.92177161099971,
+      "peak_vram_bytes": 8881829888,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0.10"
+    },
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.5280908203125,
+      "kl_per_token_mean": 6.0092973173482276e-05,
+      "entropy_mean": 1.033842194788158,
+      "response_length_mean": 295.91,
+      "response_length_std": 241.0066843471359,
+      "eos_rate": 0.92
+    },
+    "trajectory": [
+      {
+        "update": 1,
+        "prompt_indices": [
+          66
+        ],
+        "generated_tokens": 512,
+        "reward": -0.4794921875,
+        "kl_per_token": -1.8100879970006645e-05,
+        "policy_loss": -1.9487692043185234e-05,
+        "value_loss": 2.0965641736984253,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.22293810546398163,
+        "value_gradient_norm": 52.04941940307617,
+        "entropy": 1.2638373374938965,
+        "response_length": 512.0,
+        "elapsed_seconds": 27.647241724000196
+      },
+      {
+        "update": 2,
+        "prompt_indices": [
+          211
+        ],
+        "generated_tokens": 400,
+        "reward": 2.841796875,
+        "kl_per_token": -0.00043559211189858615,
+        "policy_loss": 0.0003492546093184501,
+        "value_loss": 2.432891607284546,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.23362195491790771,
+        "value_gradient_norm": 61.21585464477539,
+        "entropy": 1.1775200366973877,
+        "response_length": 400.0,
+        "elapsed_seconds": 48.658139531000415
+      },
+      {
+        "update": 3,
+        "prompt_indices": [
+          223
+        ],
+        "generated_tokens": 41,
+        "reward": 1.28125,
+        "kl_per_token": 0.001024399301968515,
+        "policy_loss": 0.0002548054908402264,
+        "value_loss": 2.0003520846366882,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 1.1429251432418823,
+        "value_gradient_norm": 241.77771759033203,
+        "entropy": 0.9256306290626526,
+        "response_length": 41.0,
+        "elapsed_seconds": 51.69541710999874
+      },
+      {
+        "update": 4,
+        "prompt_indices": [
+          141
+        ],
+        "generated_tokens": 81,
+        "reward": 2.435546875,
+        "kl_per_token": -0.00012957031140103936,
+        "policy_loss": -0.00025248452948289923,
+        "value_loss": 3.1214699745178223,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.580796867609024,
+        "value_gradient_norm": 289.64288330078125,
+        "entropy": 0.8144265413284302,
+        "response_length": 81.0,
+        "elapsed_seconds": 56.61079974799941
+      },
+      {
+        "update": 5,
+        "prompt_indices": [
+          762
+        ],
+        "generated_tokens": 512,
+        "reward": 1.330078125,
+        "kl_per_token": -8.683462510816753e-05,
+        "policy_loss": -5.9643760323524475e-05,
+        "value_loss": 2.6311038732528687,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.15714441984891891,
+        "value_gradient_norm": 71.0385856628418,
+        "entropy": 0.6669348478317261,
+        "response_length": 512.0,
+        "elapsed_seconds": 83.25445835000028
+      },
+      {
+        "update": 6,
+        "prompt_indices": [
+          934
+        ],
+        "generated_tokens": 35,
+        "reward": 0.314697265625,
+        "kl_per_token": -0.0010291829239577055,
+        "policy_loss": -0.00029673235258087516,
+        "value_loss": 4.753914833068848,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.8383251130580902,
+        "value_gradient_norm": 212.9922332763672,
+        "entropy": 0.9336641430854797,
+        "response_length": 35.0,
+        "elapsed_seconds": 86.40081052599999
+      },
+      {
+        "update": 7,
+        "prompt_indices": [
+          470
+        ],
+        "generated_tokens": 512,
+        "reward": -0.3857421875,
+        "kl_per_token": 0.00022255396470427513,
+        "policy_loss": -2.709031105041504e-05,
+        "value_loss": 2.215498685836792,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.220224529504776,
+        "value_gradient_norm": 57.52592658996582,
+        "entropy": 1.4674866199493408,
+        "response_length": 512.0,
+        "elapsed_seconds": 113.69589926699882
+      },
+      {
+        "update": 8,
+        "prompt_indices": [
+          1160
+        ],
+        "generated_tokens": 19,
+        "reward": 1.2685546875,
+        "kl_per_token": 0.0002226325450465083,
+        "policy_loss": 7.060245843604207e-05,
+        "value_loss": 3.4473421573638916,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 2.5719106197357178,
+        "value_gradient_norm": 194.2700653076172,
+        "entropy": 0.3774346709251404,
+        "response_length": 19.0,
+        "elapsed_seconds": 115.73857706099989
+      }
+    ]
+  },
+  {
+    "beta_kl": 0.2,
+    "training": {
+      "run_name": "kl_0.20",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.2,
+      "kl_beta": 0.2,
+      "total_generated_tokens": 2374,
+      "wall_clock_seconds": 130.71801641400089,
+      "peak_vram_bytes": 10280547328,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0.20"
+    },
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.4433250427246094,
+      "kl_per_token_mean": 2.3114590206319008e-05,
+      "entropy_mean": 1.007598405238241,
+      "response_length_mean": 303.305,
+      "response_length_std": 258.0825293874035,
+      "eos_rate": 0.91
+    },
+    "trajectory": [
+      {
+        "update": 1,
+        "prompt_indices": [
+          66
+        ],
+        "generated_tokens": 512,
+        "reward": -0.4794921875,
+        "kl_per_token": -1.8100879970006645e-05,
+        "policy_loss": -0.0002926187589764595,
+        "value_loss": 2.0964366793632507,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.22281483560800552,
+        "value_gradient_norm": 52.060197830200195,
+        "entropy": 1.2638373374938965,
+        "response_length": 512.0,
+        "elapsed_seconds": 27.56857205599954
+      },
+      {
+        "update": 2,
+        "prompt_indices": [
+          211
+        ],
+        "generated_tokens": 409,
+        "reward": 2.501953125,
+        "kl_per_token": -0.00025316831306554377,
+        "policy_loss": 6.812825813540258e-05,
+        "value_loss": 2.336359739303589,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.2731746733188629,
+        "value_gradient_norm": 59.35622024536133,
+        "entropy": 1.1793231964111328,
+        "response_length": 409.0,
+        "elapsed_seconds": 49.252526922999095
+      },
+      {
+        "update": 3,
+        "prompt_indices": [
+          223
+        ],
+        "generated_tokens": 33,
+        "reward": 1.93359375,
+        "kl_per_token": 0.0009116381406784058,
+        "policy_loss": -0.0003660664369817823,
+        "value_loss": 2.6078442335128784,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 1.1420088410377502,
+        "value_gradient_norm": 280.99139404296875,
+        "entropy": 0.9880028963088989,
+        "response_length": 33.0,
+        "elapsed_seconds": 51.945981097000185
+      },
+      {
+        "update": 4,
+        "prompt_indices": [
+          141
+        ],
+        "generated_tokens": 86,
+        "reward": 2.943359375,
+        "kl_per_token": -0.00036911090137436986,
+        "policy_loss": 0.00016409089585067704,
+        "value_loss": 4.232145428657532,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.42878061532974243,
+        "value_gradient_norm": 327.0633087158203,
+        "entropy": 0.9677881598472595,
+        "response_length": 86.0,
+        "elapsed_seconds": 57.18649192999874
+      },
+      {
+        "update": 5,
+        "prompt_indices": [
+          762
+        ],
+        "generated_tokens": 512,
+        "reward": 0.4755859375,
+        "kl_per_token": -0.00046897606807760894,
+        "policy_loss": 3.120303153991699e-05,
+        "value_loss": 2.9306106567382812,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.17349018156528473,
+        "value_gradient_norm": 72.5457763671875,
+        "entropy": 0.49430471658706665,
+        "response_length": 512.0,
+        "elapsed_seconds": 84.19041253699834
+      },
+      {
+        "update": 6,
+        "prompt_indices": [
+          934
+        ],
+        "generated_tokens": 291,
+        "reward": 1.7734375,
+        "kl_per_token": -0.0008128344779834151,
+        "policy_loss": 0.00011804628593381494,
+        "value_loss": 2.0644158124923706,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.30138686299324036,
+        "value_gradient_norm": 69.29373550415039,
+        "entropy": 2.057420015335083,
+        "response_length": 291.0,
+        "elapsed_seconds": 100.80227220500092
+      },
+      {
+        "update": 7,
+        "prompt_indices": [
+          470
+        ],
+        "generated_tokens": 512,
+        "reward": -0.2724609375,
+        "kl_per_token": 2.3862019588705152e-05,
+        "policy_loss": 0.0002674844581633806,
+        "value_loss": 2.2050355672836304,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 0.23359426110982895,
+        "value_gradient_norm": 81.14046859741211,
+        "entropy": 1.5868034362792969,
+        "response_length": 512.0,
+        "elapsed_seconds": 128.49022817600053
+      },
+      {
+        "update": 8,
+        "prompt_indices": [
+          1160
+        ],
+        "generated_tokens": 19,
+        "reward": 1.6611328125,
+        "kl_per_token": -0.000526538526173681,
+        "policy_loss": 2.5375891709700227e-05,
+        "value_loss": 3.326085090637207,
+        "clip_fraction": 0.0,
+        "policy_gradient_norm": 2.3133517503738403,
+        "value_gradient_norm": 208.04916381835938,
+        "entropy": 0.35421431064605713,
+        "response_length": 19.0,
+        "elapsed_seconds": 130.5354762349998
+      }
+    ]
+  }
+]

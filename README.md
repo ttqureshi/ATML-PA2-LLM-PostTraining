@@ -59,12 +59,14 @@ The standard continuation runs 20 updates from the supplied midpoint. The K=2/4/
 ```bash
 python -m task4_safety.generate_responses --config configs/feedback.yaml
 python -m task4_safety.make_audit_sheet --config configs/feedback.yaml
-# Manually label all rows in results/task4_safety/manual_audit.csv without viewing AI labels.
+# Optional AI-assisted audit labeling; records label_source=AI_ASSISTED.
+python -m scripts.apply_task4_ai_assisted_labels
 python -m task4_safety.judge_responses --config configs/feedback.yaml
 python -m task4_safety.evaluate_safety --config configs/feedback.yaml
+python -m scripts.plot_task4_safety
 ```
 
-The audit sheet fixes 30 safe and 30 unsafe XSTest IDs and includes each of the four policy responses for those IDs. Enter one of `SAFE_ANSWER`, `JUSTIFIED_REFUSAL`, `UNSAFE_COMPLIANCE`, `OVER_REFUSAL`, or `AMBIGUOUS` in every `manual_label` cell. Keep `notes` for disagreements. The judge and aggregate scripts do not fill manual labels. If the audit is incomplete, `safety_summary.json` marks it incomplete.
+The audit sheet fixes 30 safe and 30 unsafe XSTest IDs and includes each of the four policy responses for those IDs. Labels may be entered by a human or copied from the AI-assisted review file using the script above. The `label_source` column records which method was used. For AI-assisted labels, `safety_summary.json` reports cross-model agreement under `ai_assisted_audit` and sets `manual_audit_status` to `ai_assisted_complete`; this must not be described as independent human agreement. If labels are absent or incomplete, automated policy metrics and category plots remain usable.
 
 ### Task 5: RLVR versus RLAIF
 
@@ -73,9 +75,10 @@ python -m task5_feedback.evaluate_math --config configs/feedback.yaml --dataset 
 python -m task5_feedback.score_perturbations --config configs/feedback.yaml
 python -m task5_feedback.evaluate_math --config configs/feedback.yaml --dataset transfer
 python -m task5_feedback.compare_feedback --config configs/feedback.yaml
+python -m scripts.plot_task5_results
 ```
 
-The GSM8K and SVAMP runs use the fixed course sets. The controlled study uses the 100 supplied responses, and each AI preference decision is cached. The final command combines saved results; it does not retrain policies.
+The GSM8K and SVAMP runs use the fixed course sets. The controlled study uses the 100 supplied responses, and each AI preference decision is cached. The comparison command combines saved results; the plotting command exports report-ready CSV tables and figures without changing the evaluation data.
 
 ## Results and provenance
 
@@ -83,4 +86,8 @@ The GSM8K and SVAMP runs use the fixed course sets. The controlled study uses th
 
 The course starter supplies `common/`, configurations, data/model loaders, fixed verifiers and judges, and experiment scaffolds; those parts are attributed to the [course repository](https://github.com/AbDu11aHHH/ATML-PA2-LLM-PostTraining). No additional external code has been copied into this repository.
 
-The assignment permits LLM coding assistance but requires the PDF report's wording, interpretation, and analysis to be entirely the student's own. This repository does not generate report prose.
+Task 4 labels are marked `AI_ASSISTED`, and the report describes them as such rather than as independent human judgments.
+
+## Report
+
+The eight-page main report and its LaTeX source are in [`report/`](report/). Rebuild from the repository root with `pdflatex -interaction=nonstopmode -halt-on-error -output-directory report report/ATML_PA2_Report.tex` (run twice to resolve references). The references occupy a separate ninth page.

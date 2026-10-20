@@ -1,0 +1,3 @@
+﻿condition,updates,group_size,generated_tokens,wall_clock_seconds,peak_vram_bytes,heldout_examples,heldout_mean_reward,heldout_mean_sampled_kl,heldout_mean_response_length,heldout_truncated_fraction,mean_short_policy_coefficient_per_token,mean_long_policy_coefficient_per_token
+GRPO,8,4,8126,169.8599143639999,5824570368,200,1.1728340148925782,-9.433624912844607e-06,251.76,0.24,0.013136405708666244,0.007304754366706863
+Dr. GRPO,8,4,8171,178.97030227199957,7609311232,200,1.141394805908203,-1.8764622348044212e-05,252.065,0.245,0.0012901725862147508,0.0024743304471485316

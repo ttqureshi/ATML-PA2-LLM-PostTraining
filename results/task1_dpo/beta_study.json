@@ -1,0 +1,135 @@
+{
+  "dataset": "data/dpo_standard_train.jsonl",
+  "examples_per_condition": 600,
+  "heldout_dataset": "data/dpo_standard_eval.jsonl",
+  "seed": 6304,
+  "conditions": [
+    {
+      "beta": 0.03,
+      "budget": "short",
+      "training": {
+        "run_name": "beta_0.03",
+        "config": "configs/dpo.yaml",
+        "dataset": "data/dpo_standard_train.jsonl",
+        "examples": 600,
+        "epochs": 1,
+        "beta": 0.03,
+        "seed": 6304,
+        "batch_size": 2,
+        "grad_accum_steps": 8,
+        "optimizer_steps": 38,
+        "mean_training_dpo_loss": 0.6920148748159408,
+        "mean_training_preference_accuracy": 0.5866666666666667,
+        "elapsed_seconds": 670.7286035770003,
+        "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.03"
+      },
+      "evaluation": {
+        "name": "beta_0.03",
+        "adapter": "outputs/task1_dpo/beta_0.03",
+        "dataset": "data/dpo_standard_eval.jsonl",
+        "pair_count": 300,
+        "heldout_dpo_loss": 0.690799166560173,
+        "heldout_preference_accuracy": 0.65,
+        "beta_for_loss": 0.03,
+        "sampled_kl_per_response_token": -3.333014221550207e-05,
+        "response_length_tokens": {
+          "mean": 156.43333333333334,
+          "std": 105.74200784088707,
+          "count": 300
+        },
+        "reference_response_length_tokens": {
+          "mean": 156.74333333333334,
+          "std": 105.05295865525265,
+          "count": 300
+        },
+        "mean_reward_score": 1.183124033610026,
+        "mean_reference_reward_score": 1.1733838399251302
+      }
+    },
+    {
+      "beta": 0.1,
+      "budget": "short",
+      "training": {
+        "run_name": "beta_0.10",
+        "config": "configs/dpo.yaml",
+        "dataset": "data/dpo_standard_train.jsonl",
+        "examples": 600,
+        "epochs": 1,
+        "beta": 0.1,
+        "seed": 6304,
+        "batch_size": 2,
+        "grad_accum_steps": 8,
+        "optimizer_steps": 38,
+        "mean_training_dpo_loss": 0.689719657500585,
+        "mean_training_preference_accuracy": 0.57,
+        "elapsed_seconds": 672.6317951870005,
+        "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.10"
+      },
+      "evaluation": {
+        "name": "beta_0.10",
+        "adapter": "outputs/task1_dpo/beta_0.10",
+        "dataset": "data/dpo_standard_eval.jsonl",
+        "pair_count": 300,
+        "heldout_dpo_loss": 0.6864068531990051,
+        "heldout_preference_accuracy": 0.6333333333333333,
+        "beta_for_loss": 0.1,
+        "sampled_kl_per_response_token": -2.127447136426483e-05,
+        "response_length_tokens": {
+          "mean": 156.76333333333332,
+          "std": 105.90662863526951,
+          "count": 300
+        },
+        "reference_response_length_tokens": {
+          "mean": 156.74333333333334,
+          "std": 105.05295865525265,
+          "count": 300
+        },
+        "mean_reward_score": 1.1922103373209636,
+        "mean_reference_reward_score": 1.1733838399251302
+      }
+    },
+    {
+      "beta": 0.3,
+      "budget": "short",
+      "training": {
+        "run_name": "beta_0.30",
+        "config": "configs/dpo.yaml",
+        "dataset": "data/dpo_standard_train.jsonl",
+        "examples": 600,
+        "epochs": 1,
+        "beta": 0.3,
+        "seed": 6304,
+        "batch_size": 2,
+        "grad_accum_steps": 8,
+        "optimizer_steps": 38,
+        "mean_training_dpo_loss": 0.683677191734314,
+        "mean_training_preference_accuracy": 0.5883333333333334,
+        "elapsed_seconds": 676.1060960220002,
+        "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.30"
+      },
+      "evaluation": {
+        "name": "beta_0.30",
+        "adapter": "outputs/task1_dpo/beta_0.30",
+        "dataset": "data/dpo_standard_eval.jsonl",
+        "pair_count": 300,
+        "heldout_dpo_loss": 0.6780009493231773,
+        "heldout_preference_accuracy": 0.6366666666666667,
+        "beta_for_loss": 0.3,
+        "sampled_kl_per_response_token": -8.837355701862722e-05,
+        "response_length_tokens": {
+          "mean": 156.32333333333332,
+          "std": 105.79098318014736,
+          "count": 300
+        },
+        "reference_response_length_tokens": {
+          "mean": 156.74333333333334,
+          "std": 105.05295865525265,
+          "count": 300
+        },
+        "mean_reward_score": 1.1746776835123698,
+        "mean_reference_reward_score": 1.1733838399251302
+      }
+    }
+  ],
+  "note": "Short beta forks use a different training budget from standard one-epoch DPO."
+}

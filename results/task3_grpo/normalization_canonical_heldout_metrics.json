@@ -1,0 +1,13 @@
+{
+  "name": "normalization_canonical",
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_canonical",
+  "examples": 200,
+  "mean_reward": 1.1728340148925782,
+  "mean_sampled_kl": -9.433624912844607e-06,
+  "mean_response_length": 251.76,
+  "truncated_fraction": 0.24,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 512
+  }
+}

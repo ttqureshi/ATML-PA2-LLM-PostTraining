@@ -129,8 +129,36 @@ def main():
             raise ValueError("Fixed audit IDs must balance SAFE and UNSAFE prompts")
     result = summarize(rows, manual, audit_ids)
     expected_n = 2 * int(cfg["manual_audit_per_class"]) * len(POLICIES)
-    result["manual_audit_status"] = ("not_started" if manual is None else
-                                     "complete" if result.get("manual_audit", {}).get("n") == expected_n else "incomplete")
+    audit_n = result.get("manual_audit", {}).get("n", 0)
+    sources = set()
+    if manual is not None and "label_source" in manual:
+        sources = {str(value).strip().upper() for value in manual["label_source"].dropna() if str(value).strip()}
+    if sources and sources != {"HUMAN"}:
+        if sources != {"AI_ASSISTED"}:
+            raise ValueError(f"Audit labels must have one consistent source; got {sorted(sources)}")
+        audit = result.pop("manual_audit", None)
+        if audit is not None:
+            result["ai_assisted_audit"] = {
+                "n": audit["n"],
+                "cross_model_agreement": audit["agreement"],
+                "audit_label_ambiguous_rate": audit["manual_ambiguous_rate"],
+                "judge_ambiguous_rate": audit["ai_ambiguous_rate"],
+                "confusion_audit_labels_rows_judge_labels_columns": audit["confusion_manual_rows_ai_columns"],
+                "by_policy": {
+                    name: {
+                        "n": values["n"],
+                        "cross_model_agreement": values["agreement"],
+                        "audit_label_ambiguous_rate": values["manual_ambiguous_rate"],
+                        "judge_ambiguous_rate": values["ai_ambiguous_rate"],
+                    }
+                    for name, values in audit["by_policy"].items()
+                },
+            }
+        result["audit_label_source"] = "AI_ASSISTED"
+        result["manual_audit_status"] = "ai_assisted_complete" if audit_n == expected_n else "ai_assisted_incomplete"
+    else:
+        result["manual_audit_status"] = ("not_started" if manual is None else
+                                         "complete" if audit_n == expected_n else "incomplete")
     save_json(outdir / "safety_summary.json", result)
     print(outdir / "safety_summary.json")
 

@@ -1,0 +1,86 @@
+[
+  {
+    "epsilon": 0.05,
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.5280908203125,
+      "kl_per_token_mean": 6.0092973173482276e-05,
+      "entropy_mean": 1.033842194788158,
+      "response_length_mean": 295.91,
+      "response_length_std": 241.0066843471359,
+      "eos_rate": 0.92
+    },
+    "training": {
+      "run_name": "clip_0.05",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.05,
+      "kl_beta": 0.1,
+      "total_generated_tokens": 2112,
+      "wall_clock_seconds": 113.97129796099989,
+      "peak_vram_bytes": 8728230912,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.05"
+    },
+    "stability": {
+      "policy_loss_std_across_updates": 0.00020866021797146344,
+      "gradient_norm_std_across_updates": 0.765394580159348,
+      "clip_fraction_mean_across_updates": 0.0
+    }
+  },
+  {
+    "epsilon": 0.2,
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.5280908203125,
+      "kl_per_token_mean": 6.0092973173482276e-05,
+      "entropy_mean": 1.033842194788158,
+      "response_length_mean": 295.91,
+      "response_length_std": 241.0066843471359,
+      "eos_rate": 0.92
+    },
+    "training": {
+      "run_name": "clip_0.20",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.2,
+      "kl_beta": 0.1,
+      "total_generated_tokens": 2112,
+      "wall_clock_seconds": 127.29924939300054,
+      "peak_vram_bytes": 11957192192,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.20"
+    },
+    "stability": {
+      "policy_loss_std_across_updates": 0.00020866021797146344,
+      "gradient_norm_std_across_updates": 0.765394580159348,
+      "clip_fraction_mean_across_updates": 0.0
+    }
+  },
+  {
+    "epsilon": 0.5,
+    "heldout": {
+      "n": 200,
+      "reward_mean": 1.5280908203125,
+      "kl_per_token_mean": 6.0092973173482276e-05,
+      "entropy_mean": 1.033842194788158,
+      "response_length_mean": 295.91,
+      "response_length_std": 241.0066843471359,
+      "eos_rate": 0.92
+    },
+    "training": {
+      "run_name": "clip_0.50",
+      "updates": 8,
+      "seed": 6304,
+      "clip_epsilon": 0.5,
+      "kl_beta": 0.1,
+      "total_generated_tokens": 2112,
+      "wall_clock_seconds": 125.42179103400122,
+      "peak_vram_bytes": 10276860416,
+      "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.50"
+    },
+    "stability": {
+      "policy_loss_std_across_updates": 0.00020866021797146344,
+      "gradient_norm_std_across_updates": 0.765394580159348,
+      "clip_fraction_mean_across_updates": 0.0
+    }
+  }
+]

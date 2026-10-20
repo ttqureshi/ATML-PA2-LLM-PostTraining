@@ -1,0 +1,26 @@
+{
+  "name": "length_balanced_stratified",
+  "adapter": "outputs/task1_dpo/length_balanced",
+  "dataset": "data/dpo_length_stratified_eval.jsonl",
+  "pair_count": 246,
+  "heldout_dpo_loss": 0.6742035025745873,
+  "heldout_preference_accuracy": 0.6260162601626016,
+  "beta_for_loss": 0.1,
+  "strata": {
+    "length_matched": {
+      "count": 82,
+      "heldout_preference_accuracy": 0.6463414634146342,
+      "heldout_dpo_loss": 0.676035959182716
+    },
+    "preferred_longer": {
+      "count": 82,
+      "heldout_preference_accuracy": 0.4146341463414634,
+      "heldout_dpo_loss": 0.7263621360790439
+    },
+    "rejected_longer": {
+      "count": 82,
+      "heldout_preference_accuracy": 0.8170731707317073,
+      "heldout_dpo_loss": 0.6202124124620019
+    }
+  }
+}

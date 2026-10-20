@@ -1,0 +1,11 @@
+{
+  "run_name": "clip_0.50",
+  "updates": 8,
+  "seed": 6304,
+  "clip_epsilon": 0.5,
+  "kl_beta": 0.1,
+  "total_generated_tokens": 2112,
+  "wall_clock_seconds": 125.42179103400122,
+  "peak_vram_bytes": 10276860416,
+  "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.50"
+}

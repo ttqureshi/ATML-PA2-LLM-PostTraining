@@ -1,0 +1,71 @@
+{
+  "grpo": {
+    "train": {
+      "run_name": "normalization_canonical",
+      "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_canonical",
+      "source_midpoint": "checkpoints/grpo_midpoint_policy",
+      "loss_type": "grpo",
+      "updates": 8,
+      "group_size": 4,
+      "prompts_per_update": 1,
+      "policy_epochs": 1,
+      "max_completion_length": 512,
+      "seed": 6304,
+      "generated_tokens": 8126,
+      "maximum_generated_token_budget": 16384,
+      "wall_clock_seconds": 169.8599143639999,
+      "peak_vram_bytes": 5824570368,
+      "trajectory": "/kaggle/working/ATML-PA2-LLM-PostTraining/results/task3_grpo/normalization_canonical_trajectory.jsonl"
+    },
+    "heldout": {
+      "name": "normalization_canonical",
+      "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_canonical",
+      "examples": 200,
+      "mean_reward": 1.1728340148925782,
+      "mean_sampled_kl": -9.433624912844607e-06,
+      "mean_response_length": 251.76,
+      "truncated_fraction": 0.24,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 512
+      }
+    },
+    "mean_short_policy_coefficient_per_token": 0.013136405708666244,
+    "mean_long_policy_coefficient_per_token": 0.007304754366706863
+  },
+  "dr_grpo": {
+    "train": {
+      "run_name": "normalization_dr_grpo",
+      "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_dr_grpo",
+      "source_midpoint": "checkpoints/grpo_midpoint_policy",
+      "loss_type": "dr_grpo",
+      "updates": 8,
+      "group_size": 4,
+      "prompts_per_update": 1,
+      "policy_epochs": 1,
+      "max_completion_length": 512,
+      "seed": 6304,
+      "generated_tokens": 8171,
+      "maximum_generated_token_budget": 16384,
+      "wall_clock_seconds": 178.97030227199957,
+      "peak_vram_bytes": 7609311232,
+      "trajectory": "/kaggle/working/ATML-PA2-LLM-PostTraining/results/task3_grpo/normalization_dr_grpo_trajectory.jsonl"
+    },
+    "heldout": {
+      "name": "normalization_dr_grpo",
+      "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/normalization_dr_grpo",
+      "examples": 200,
+      "mean_reward": 1.141394805908203,
+      "mean_sampled_kl": -1.8764622348044212e-05,
+      "mean_response_length": 252.065,
+      "truncated_fraction": 0.245,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 512
+      }
+    },
+    "mean_short_policy_coefficient_per_token": 0.0012901725862147508,
+    "mean_long_policy_coefficient_per_token": 0.0024743304471485316
+  },
+  "paired_examples": "/kaggle/working/ATML-PA2-LLM-PostTraining/results/task3_grpo/normalization_paired_examples.jsonl"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "standard",
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task3_grpo/standard",
+  "examples": 200,
+  "mean_reward": 1.2130067443847656,
+  "mean_sampled_kl": -7.197121495892134e-06,
+  "mean_response_length": 253.635,
+  "truncated_fraction": 0.24,
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 512
+  }
+}

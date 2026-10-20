@@ -1,0 +1,11 @@
+{
+  "run_name": "standard",
+  "updates": 20,
+  "seed": 6304,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.1,
+  "total_generated_tokens": 5202,
+  "wall_clock_seconds": 279.810945463,
+  "peak_vram_bytes": 8366587392,
+  "output_adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard"
+}

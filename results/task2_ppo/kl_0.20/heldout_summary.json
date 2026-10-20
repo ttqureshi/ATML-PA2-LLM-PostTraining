@@ -1,0 +1,9 @@
+{
+  "n": 200,
+  "reward_mean": 1.4433250427246094,
+  "kl_per_token_mean": 2.3114590206319008e-05,
+  "entropy_mean": 1.007598405238241,
+  "response_length_mean": 303.305,
+  "response_length_std": 258.0825293874035,
+  "eos_rate": 0.91
+}

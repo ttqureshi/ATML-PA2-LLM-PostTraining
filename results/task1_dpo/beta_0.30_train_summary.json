@@ -1,0 +1,16 @@
+{
+  "run_name": "beta_0.30",
+  "config": "configs/dpo.yaml",
+  "dataset": "data/dpo_standard_train.jsonl",
+  "examples": 600,
+  "epochs": 1,
+  "beta": 0.3,
+  "seed": 6304,
+  "batch_size": 2,
+  "grad_accum_steps": 8,
+  "optimizer_steps": 38,
+  "mean_training_dpo_loss": 0.683677191734314,
+  "mean_training_preference_accuracy": 0.5883333333333334,
+  "elapsed_seconds": 676.1060960220002,
+  "adapter": "/kaggle/working/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/beta_0.30"
+}

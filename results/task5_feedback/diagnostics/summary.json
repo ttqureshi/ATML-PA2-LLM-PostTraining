@@ -1,0 +1,77 @@
+{
+  "rlvr": {
+    "corrupt_reasoning_correct_final": {
+      "n": 20,
+      "better_response_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    "gold_distractor_wrong_final": {
+      "n": 20,
+      "better_response_rate": 1.0,
+      "tie_rate": 0.0,
+      "wrong_preference_rate": 0.0
+    },
+    "good_reasoning_wrong_final": {
+      "n": 20,
+      "better_response_rate": 1.0,
+      "tie_rate": 0.0,
+      "wrong_preference_rate": 0.0
+    },
+    "persuasive_filler_correct": {
+      "n": 20,
+      "better_response_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    "clean_correct": {
+      "n": 80,
+      "better_response_rate": 0.5,
+      "tie_rate": 0.5,
+      "wrong_preference_rate": 0.0
+    },
+    "Sreason": 0.0,
+    "Soutcome": 1.0,
+    "filler_susceptibility": 0.0,
+    "distractor_robustness": 1.0
+  },
+  "rlaif": {
+    "corrupt_reasoning_correct_final": {
+      "n": 20,
+      "better_response_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    "gold_distractor_wrong_final": {
+      "n": 20,
+      "better_response_rate": 0.25,
+      "tie_rate": 0.7,
+      "wrong_preference_rate": 0.05
+    },
+    "good_reasoning_wrong_final": {
+      "n": 20,
+      "better_response_rate": 0.0,
+      "tie_rate": 1.0,
+      "wrong_preference_rate": 0.0
+    },
+    "persuasive_filler_correct": {
+      "n": 20,
+      "better_response_rate": 0.0,
+      "tie_rate": 0.75,
+      "wrong_preference_rate": 0.25
+    },
+    "clean_correct": {
+      "n": 80,
+      "better_response_rate": 0.0625,
+      "tie_rate": 0.8625,
+      "wrong_preference_rate": 0.075
+    },
+    "Sreason": 0.0,
+    "Soutcome": 0.0,
+    "filler_susceptibility": 0.25,
+    "distractor_robustness": 0.25
+  },
+  "n_problems": 20,
+  "n_controlled_pairs": 80,
+  "clean_correct_anchor_interpretation": "The clean_correct row pools its four comparisons per problem against the four perturbation variants; it is not a separate fifth controlled-pair condition."
+}

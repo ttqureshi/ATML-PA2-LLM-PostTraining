@@ -1,0 +1,173 @@
+{
+  "task": "task3_grpo",
+  "source_commit": "053fa7c1fd4eb6d1cff86a469a2279c300ee14e5",
+  "kaggle_archive_sha256": "63f1c28331159dfd2014c7b9dfe9d31db83e0cde68acdd1fdd36b9641800dafa",
+  "file_count": 33,
+  "files": [
+    {
+      "path": "results/task3_grpo/figures/grpo_group_size_analysis.png",
+      "bytes": 137121,
+      "sha256": "f6b94bc2b724c9420d40673a8b30f16956451f0e59977556e818d7dbd17d3ab9"
+    },
+    {
+      "path": "results/task3_grpo/figures/grpo_length_conditioned_coefficients.png",
+      "bytes": 55842,
+      "sha256": "4e981901f14be8b1bc0205a4507f04298352d41dd967231292c6529d29a200b9"
+    },
+    {
+      "path": "results/task3_grpo/figures/grpo_normalization_heldout.png",
+      "bytes": 109739,
+      "sha256": "2c5311a73121a677f3fc5ec2734deefe1b2e5496fec7faf949e236f9500f57ea"
+    },
+    {
+      "path": "results/task3_grpo/figures/grpo_normalization_trajectories.png",
+      "bytes": 268958,
+      "sha256": "752aefb70b36d63600d79ab26e36073cb716506953d0c81c02b96f497fe07122"
+    },
+    {
+      "path": "results/task3_grpo/figures/grpo_standard_trajectory.png",
+      "bytes": 422471,
+      "sha256": "f70bb43247604dbc0dd67db8f459261b81b7c9014007c82513d897368e32a300"
+    },
+    {
+      "path": "results/task3_grpo/group_size.json",
+      "bytes": 47107,
+      "sha256": "05f6cc5d6771bce9c100d6e9d3fd1662a351d1384e556fe47196bd7ec535b7b9"
+    },
+    {
+      "path": "results/task3_grpo/group_size_metrics.csv",
+      "bytes": 854,
+      "sha256": "576b2f966961360e52382024f791a5ecc8ccc58078833813b0396f8bcaed2078"
+    },
+    {
+      "path": "results/task3_grpo/kaggle_output_archive.zip",
+      "bytes": 12757235,
+      "sha256": "63f1c28331159dfd2014c7b9dfe9d31db83e0cde68acdd1fdd36b9641800dafa"
+    },
+    {
+      "path": "results/task3_grpo/kaggle_run_commit.txt",
+      "bytes": 41,
+      "sha256": "03e9b2e85cbde540d331b38d55061bc216836e99dfe79f229ca1b3549f5e0d86"
+    },
+    {
+      "path": "results/task3_grpo/normalization_canonical_heldout_examples.jsonl",
+      "bytes": 406978,
+      "sha256": "aa7f541eec0c2866b8f2ba5dc9b78d67bb2ffff7a48669e888694d65a866aefe"
+    },
+    {
+      "path": "results/task3_grpo/normalization_canonical_heldout_metrics.json",
+      "bytes": 376,
+      "sha256": "9d98de05b318cb9750ce8cf3a07762fc2e22a3e348f3da6a045fa154131f44d3"
+    },
+    {
+      "path": "results/task3_grpo/normalization_canonical_summary.json",
+      "bytes": 624,
+      "sha256": "cee1ec950d63b8f0dbebe5dfdb09b3c95532bfded37517d5ca585ee0188d5fde"
+    },
+    {
+      "path": "results/task3_grpo/normalization_canonical_trajectory.jsonl",
+      "bytes": 6761,
+      "sha256": "00c2aaddd46a43014f6a53904b028f71a7e81dd36d5455841313df97853e4931"
+    },
+    {
+      "path": "results/task3_grpo/normalization_comparison.json",
+      "bytes": 2718,
+      "sha256": "7cb846bd2a464ba7f87151e7d54364b77ad7ddfd919fa2271bf3cc782d36fca8"
+    },
+    {
+      "path": "results/task3_grpo/normalization_dr_grpo_heldout_examples.jsonl",
+      "bytes": 405984,
+      "sha256": "97316b2ad7c0ac88b2e53608a2764b27cc98fa719929bd8a828f53ee992909de"
+    },
+    {
+      "path": "results/task3_grpo/normalization_dr_grpo_heldout_metrics.json",
+      "bytes": 374,
+      "sha256": "a2987280c6a6f01595463943178c623c68299eda16533cb88346f1166dbc7d29"
+    },
+    {
+      "path": "results/task3_grpo/normalization_dr_grpo_summary.json",
+      "bytes": 622,
+      "sha256": "2600077ea59e94fcaede3d4ad54f4f9a48ac9bf71c9af7349bb48d60375f6880"
+    },
+    {
+      "path": "results/task3_grpo/normalization_dr_grpo_trajectory.jsonl",
+      "bytes": 6760,
+      "sha256": "838d3410115fc1716affea04962fcb952722b35da63a4219d7eec2fabb419acd"
+    },
+    {
+      "path": "results/task3_grpo/normalization_metrics.csv",
+      "bytes": 578,
+      "sha256": "9f7ea25224ab107d6f5a09ae4b96e511bdfc2bac7746b440db5e193a70fb9a83"
+    },
+    {
+      "path": "results/task3_grpo/normalization_paired_examples.jsonl",
+      "bytes": 658102,
+      "sha256": "b8fcea1db7ad6865e6e0ffb540eb9220b5bc1efa5a8fd7d08211680410ac5105"
+    },
+    {
+      "path": "results/task3_grpo/standard_heldout_examples.jsonl",
+      "bytes": 407726,
+      "sha256": "a59ef870d81dd425bc11a947d06bcafc75a593ad36cd3a93f63235ef4a9da495"
+    },
+    {
+      "path": "results/task3_grpo/standard_heldout_metrics.json",
+      "bytes": 347,
+      "sha256": "d8d7e9e61cd3d46840f07dd3690bf66d203d2c8bd7a4cf8ace5f217d5fe1a64c"
+    },
+    {
+      "path": "results/task3_grpo/standard_summary.json",
+      "bytes": 577,
+      "sha256": "39d7dffcdb41f40d1daf6d99f74949549aaaaca01cd825c5e4df9776ef42b491"
+    },
+    {
+      "path": "results/task3_grpo/standard_trajectory.jsonl",
+      "bytes": 16561,
+      "sha256": "fefd60bb1ecee97ea91d17956d992eca376a6289c07b7b7d7fac12ce21b3ada6"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_canonical/adapter_config.json",
+      "bytes": 860,
+      "sha256": "18993c388788ec14de72fd4f6f9ff86ce761ffc3aad5d0923b33f4365be03d97"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_canonical/adapter_model.safetensors",
+      "bytes": 4372840,
+      "sha256": "72e52cf3a380bcfdfb4f56b70ced86fe65cb4c07ef496189a74845f33fe5bbdf"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_canonical/README.md",
+      "bytes": 5206,
+      "sha256": "5c8801974aec6f1615397792061cb2caaa1bf0a487d22c161376a58210dd942e"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_dr_grpo/adapter_config.json",
+      "bytes": 860,
+      "sha256": "18993c388788ec14de72fd4f6f9ff86ce761ffc3aad5d0923b33f4365be03d97"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_dr_grpo/adapter_model.safetensors",
+      "bytes": 4372840,
+      "sha256": "8050d236e6707870f3344e89c5cc0d07e3f0e9a04129812345e35de563299fd0"
+    },
+    {
+      "path": "outputs/task3_grpo/normalization_dr_grpo/README.md",
+      "bytes": 5206,
+      "sha256": "5c8801974aec6f1615397792061cb2caaa1bf0a487d22c161376a58210dd942e"
+    },
+    {
+      "path": "outputs/task3_grpo/standard/adapter_config.json",
+      "bytes": 860,
+      "sha256": "b7c4427b92d1514135b9f3530e3fc9134a1f9f460f980c8798a22c7d5fd0d4ae"
+    },
+    {
+      "path": "outputs/task3_grpo/standard/adapter_model.safetensors",
+      "bytes": 4372840,
+      "sha256": "b79e098995bf2d807268e5a812213903547ca2c34c37bda1943587a9858a3a11"
+    },
+    {
+      "path": "outputs/task3_grpo/standard/README.md",
+      "bytes": 5206,
+      "sha256": "5c8801974aec6f1615397792061cb2caaa1bf0a487d22c161376a58210dd942e"
+    }
+  ]
+}

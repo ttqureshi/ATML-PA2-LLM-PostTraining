@@ -1,0 +1,9 @@
+mechanism,variant,n,better_response_rate,tie_rate,wrong_preference_rate
+rlvr,corrupt_reasoning_correct_final,20,0.0,1.0,0.0
+rlvr,good_reasoning_wrong_final,20,1.0,0.0,0.0
+rlvr,persuasive_filler_correct,20,0.0,1.0,0.0
+rlvr,gold_distractor_wrong_final,20,1.0,0.0,0.0
+rlaif,corrupt_reasoning_correct_final,20,0.0,1.0,0.0
+rlaif,good_reasoning_wrong_final,20,0.0,1.0,0.0
+rlaif,persuasive_filler_correct,20,0.0,0.75,0.25
+rlaif,gold_distractor_wrong_final,20,0.25,0.7,0.05
